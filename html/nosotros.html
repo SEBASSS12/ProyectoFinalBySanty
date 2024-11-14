@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Ropa Bonne Mode - Nosotros</title>
+    <link rel="stylesheet" href="\css\Nosotros.css">
+    <style>
+        .vision-mision {
+            display: flex;
+            justify-content: space-around;
+            margin: 20px 0;
+        }
+        .mision, .vision {
+            border: 2px solid #ccc;
+            padding: 20px;
+            border-radius: 10px;
+            width: 45%;
+            background-color: #f9f9f9;
+        }
+        .galeria {
+            text-align: center;
+            margin: 20px 0;
+        }
+        .imagenes img {
+            margin: 10px;
+            width: 200px; /* Adjust width as needed */
+            border-radius: 10px;
+            cursor: pointer;
+        }
+    </style>
+    <script>
+        function mostrarNombre(nombre) {
+            alert(`Este es ${nombre}`);
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Tienda de Ropa Bonne Mode</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="ofertas.html">Ofertas</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="Carrito.html">Carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="vision-mision">
+            <div class="mision">
+                <h2>Nuestra Misión</h2>
+                <p>Proporcionar a nuestros clientes ropa de moda accesible y de alta calidad, acompañada de un excelente servicio al cliente.</p>
+            </div>
+            <div class="vision">
+                <h2>Nuestra Visión</h2>
+                <p>Ser la tienda de ropa preferida en nuestra comunidad, reconocida por nuestra innovación en moda y compromiso con la sostenibilidad.</p>
+            </div>
+        </section>
+
+        <section class="galeria">
+            <h2>Nuestra Galería</h2>
+            <div class="imagenes">
+                <img src="\img\sebas.jpg" alt="Administrador" title="Administrador" onclick="mostrarNombre('Sebastian salinas')">
+                <img src="\img\dahi.jpg" alt="Ejecutivo" title="Ejecutivo" onclick="mostrarNombre('Dahiana')">
+                <img src="\img\karina.jpg" alt="Ventas" title="Ventas" onclick="mostrarNombre('Karina')">
+                <img src="\img\lisbe.jpg" alt="Compras" title="Compras" onclick="mostrarNombre('Lisbe')">
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tienda de Ropa Bonne Mode</p>
+    </footer>
+</body>
+</html>

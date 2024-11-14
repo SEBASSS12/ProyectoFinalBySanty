@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda de Ropa Bonne Mode - Ofertas</title>
+    <link rel="stylesheet" href="\css\ofertas.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .producto-detalle {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 20px;
+        }
+
+        .producto {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 10px;
+            text-align: center;
+            width: 200px;
+        }
+
+        .carrito {
+            margin: 20px;
+            border: 1px solid #ccc;
+            padding: 10px;
+            border-radius: 10px;
+            background-color: #f9f9f9;
+        }
+
+        .carrito h2 {
+            text-align: center;
+        }
+
+        .carrito ul {
+            list-style-type: none;
+            padding: 0;
+        }
+    </style>
+    <script>
+        let carrito = [];
+
+        function agregarAlCarrito(nombre, precio) {
+            carrito.push({ nombre, precio });
+            actualizarCarrito();
+        }
+
+        function actualizarCarrito() {
+            const carritoLista = document.getElementById('carrito-lista');
+            carritoLista.innerHTML = '';
+
+            carrito.forEach(item => {
+                const li = document.createElement('li');
+                li.textContent = `${item.nombre} - $${item.precio}`;
+                carritoLista.appendChild(li);
+            });
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <h1>Tienda de Ropa Bonne Mode</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="productos.html">Productos</a></li>
+                <li><a href="ofertas.html">Ofertas</a></li>
+                <li><a href="nosotros.html">Nosotros</a></li>
+                <li><a href="contacto.html">Contacto</a></li>
+                <li><a href="Carrito.html">carrito</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="productos-lista">
+            <h2>Ofertas Especiales</h2>
+            <div class="producto-detalle">
+                <div class="producto">
+                    <img src="\img\camisa casual.jpg" alt="Camisa Casual">
+                    <h3>Camisa Casual</h3>
+                    <p><s>$29.99</s> <strong>$19.99</strong></p>
+                    <button onclick="agregarAlCarrito('Camisa Casual', 19.99)">Agregar al Carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="\img\pantalon mesc.png" alt="Pantalón de Mezclilla">
+                    <h3>Pantalón de Mezclilla</h3>
+                    <p><s>$49.99</s> <strong>$34.99</strong></p>
+                    <button onclick="agregarAlCarrito('Pantalón de Mezclilla', 34.99)">Agregar al Carrito</button>
+                </div>
+                <div class="producto">
+                    <img src="\img\vestido de verano.jpg" alt="Vestido de Verano">
+                    <h3>Vestido de Verano</h3>
+                    <p><s>$59.99</s> <strong>$44.99</strong></p>
+                    <button onclick="agregarAlCarrito('Vestido de Verano', 44.99)">Agregar al Carrito</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="carrito">
+            <h2>Productos en el Carrito</h2>
+            <ul id="carrito-lista"></ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Tienda de Ropa Bonne Mode</p>
+    </footer>
+</body>
+</html>

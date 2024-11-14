@@ -1,0 +1,87 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #e0f7fa; /* Azul pastel */
+}
+
+header {
+    background-color: #4db6ac; /* Verde pastel */
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+.hero {
+    background-color: #ffab40; /* Naranja pastel */
+    color: white;
+    padding: 50px;
+    text-align: center;
+}
+
+.hero .btn {
+    background-color: white;
+    color: #4db6ac; /* Verde pastel */
+    padding: 10px 20px;
+    text-decoration: none;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px; /* Bordes redondeados */
+}
+
+.destacados {
+    padding: 20px;
+    text-align: center;
+}
+
+.destacados h2 {
+    margin-bottom: 20px;
+}
+
+.productos-grid {
+    display: flex;
+    justify-content: space-around;
+}
+
+.producto {
+    background-color: white;
+    padding: 10px;
+    border: 1px solid #ddd;
+    width: 30%;
+    text-align: center;
+    border-radius: 10px; /* Bordes redondeados */
+}
+
+.producto img {
+    max-width: 100%;
+    height: auto;
+}
+
+footer {
+    background-color: #4db6ac; /* Verde pastel */
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}
